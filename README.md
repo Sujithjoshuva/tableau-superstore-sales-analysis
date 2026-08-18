@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project analyzes the **Superstore dataset** using Tableau to understand sales, profit, customer, product, regional, and discount performance.
+This project analyzes the **Superstore dataset** using Tableau to understand sales, profit, customer, product, regional, discount, and performance trends.
 
 The project is being developed step by step while learning Tableau from beginner to advanced level.
 
@@ -58,16 +58,17 @@ The analysis currently explores questions such as:
 - Which sub-categories have high sales but low or negative profitability?
 - How does discount level relate to profitability?
 - Which sub-categories have low, medium, or high sales performance?
+- How can parameters be used to dynamically change the dimension and metric displayed in a visualization?
 
 ---
 
 # Tableau Worksheets
 
-The workbook currently contains **25 worksheets** covering Tableau concepts from foundational analysis through calculated fields.
+The workbook currently contains **27 worksheets** covering Tableau concepts from foundational analysis through calculated fields, groups, sets, and parameters.
 
 ---
 
-## Lessons 1–3: Tableau Foundations and Analysis
+# Lessons 1–3: Tableau Foundations and Analysis
 
 ### 1. Sales by Region
 
@@ -144,8 +145,6 @@ A Set Action was created to allow users to select a region and dynamically updat
 # Lesson 5 — Calculated Fields
 
 Lesson 5 focused on creating calculated fields and using conditional logic to generate new analytical metrics and business classifications.
-
----
 
 ## Calculated Fields Created
 
@@ -275,6 +274,183 @@ Classifies sub-categories into Low, Medium, and High Sales groups.
 
 ---
 
+# Lesson 6 — Parameters
+
+Lesson 6 focused on Tableau Parameters and how they can be used to create interactive and dynamic visualizations.
+
+Instead of creating separate worksheets for every metric or dimension, parameters allow the user to control what the visualization displays.
+
+## Parameters Created
+
+### Select Metric
+
+Allows the user to choose between:
+
+- Sales
+- Profit
+- Quantity
+
+### Select Dimension
+
+Allows the user to choose between:
+
+- Region
+- Category
+- Sub-Category
+
+---
+
+# Dynamic Calculated Fields
+
+## Selected Metric
+
+```text
+CASE [Select Metric]
+
+WHEN "Sales" THEN SUM([Sales])
+WHEN "Profit" THEN SUM([Profit])
+WHEN "Quantity" THEN SUM([Quantity])
+
+END
+```
+
+This calculation dynamically changes the measure used by the visualization based on the user's parameter selection.
+
+---
+
+## Selected Dimension
+
+```text
+CASE [Select Dimension]
+
+WHEN "Region" THEN [Region]
+WHEN "Category" THEN [Category]
+WHEN "Sub-Category" THEN [Sub-Category]
+
+END
+```
+
+This calculation dynamically changes the dimension displayed in the visualization.
+
+---
+
+## Metric Label
+
+```text
+CASE [Select Metric]
+
+WHEN "Sales" THEN
+    "Sales ($)"
+
+WHEN "Profit" THEN
+    "Profit ($)"
+
+WHEN "Quantity" THEN
+    "Quantity (Units)"
+
+END
+```
+
+Provides a dynamic label that explains the unit associated with the selected metric.
+
+---
+
+# Lesson 6 Worksheets
+
+### 26. Parameter Metric Selection
+
+Demonstrates dynamic metric selection using the `Select Metric` parameter.
+
+The user can switch between:
+
+- Sales
+- Profit
+- Quantity
+
+The same visualization updates dynamically based on the selected metric.
+
+### 27. Parameter Dimension Selection
+
+The final Lesson 6 parameter analysis.
+
+The worksheet combines two parameters:
+
+**Select Dimension**
+
+- Region
+- Category
+- Sub-Category
+
+**Select Metric**
+
+- Sales
+- Profit
+- Quantity
+
+The same visualization can therefore answer different questions without creating separate charts.
+
+Examples:
+
+```text
+Region + Profit
+Category + Sales
+Sub-Category + Quantity
+```
+
+The worksheet also includes:
+
+- Dynamic dimension selection
+- Dynamic metric selection
+- Dynamic worksheet title
+- Dynamic metric labels
+- Interactive parameter controls
+- Standard Tableau sorting
+
+---
+
+# Lesson 6 Parameter Analysis Results
+
+## Region + Profit
+
+| Region | Profit |
+|---|---:|
+| West | $108,418.45 |
+| East | $91,522.78 |
+| South | $46,749.43 |
+| Central | $39,706.36 |
+
+### Finding
+
+**West** has the highest regional profit at **$108,418.45**, while **Central** has the lowest at **$39,706.36**.
+
+---
+
+## Category + Sales
+
+| Category | Sales |
+|---|---:|
+| Technology | $836,154.03 |
+| Furniture | $741,999.80 |
+| Office Supplies | $719,047.03 |
+
+### Finding
+
+**Technology** generates the highest sales among the three categories at **$836,154.03**.
+
+---
+
+## Sub-Category + Quantity
+
+The highest quantity result is:
+
+- **Binders — 5,974 units**
+
+### Finding
+
+**Binders** have the highest quantity sold among the sub-categories in this parameter analysis.
+
+---
+
 # Key Findings
 
 ## Sales Performance
@@ -367,7 +543,7 @@ Three sub-categories were compared across Sales, Profit, Profit Margin, Quantity
 | Quantity | 234 | 1,400 | 1,241 |
 | Average Sales per Unit | $639.00 | $8.90 | $166.80 |
 
-### Copiers
+## Copiers
 
 Copiers generate relatively high-value sales per unit and strong total profit.
 
@@ -377,7 +553,7 @@ Copiers generate relatively high-value sales per unit and strong total profit.
 - Quantity: **234**
 - Average Sales per Unit: **$639.00**
 
-### Labels
+## Labels
 
 Labels have the highest profit margin among the three but a much lower average sales value per unit.
 
@@ -387,7 +563,7 @@ Labels have the highest profit margin among the three but a much lower average s
 - Quantity: **1,400**
 - Average Sales per Unit: **$8.90**
 
-### Tables
+## Tables
 
 Tables generate high sales but are loss-making.
 
@@ -418,7 +594,7 @@ The 17 sub-categories were classified into three groups based on total profit.
 | Strong Profit | **9** |
 | **Total** | **17** |
 
-### Loss-Making Sub-Categories
+## Loss-Making Sub-Categories
 
 - Tables
 - Bookcases
@@ -510,7 +686,7 @@ The 17 sub-categories were classified into three sales-performance groups.
 - OR logic
 - IN and OUT members
 - Set Actions
-- Interactive set analysis
+- Interactive Set analysis
 
 ## Calculated Fields
 
@@ -531,6 +707,20 @@ The 17 sub-categories were classified into three sales-performance groups.
 - Profit Performance
 - Discount Band
 - Sales Performance
+
+## Parameters
+
+- Creating Parameters
+- String Parameters
+- List-based Parameter Values
+- Parameters inside Calculated Fields
+- `CASE` statements
+- Dynamic Metric Selection
+- Dynamic Dimension Selection
+- Dynamic Worksheet Titles
+- Dynamic Metric Labels
+- Multiple Parameters
+- Interactive Parameter Controls
 
 ---
 
@@ -568,6 +758,20 @@ A sub-category can generate high sales while producing low or negative profit.
 
 This highlights the importance of analyzing **Sales, Profit, Profit Margin, Quantity, and unit-level metrics together**.
 
+### 8. Parameters improve dashboard flexibility
+
+Parameters allow users to dynamically change the dimension and metric being analyzed without requiring separate worksheets for every combination.
+
+For example, the same visualization can switch between:
+
+```text
+Region + Profit
+Category + Sales
+Sub-Category + Quantity
+```
+
+This creates a more flexible and interactive Tableau analysis.
+
 ---
 
 # Project Structure
@@ -577,7 +781,8 @@ tableau-superstore-sales-analysis/
 │
 ├── tableau/
 │   ├── Superstore_Sales_Analysis.twbx
-│   └── Superstore_Sales_Analysis_Lesson_5.twbx
+│   ├── Superstore_Sales_Analysis_Lesson_5.twbx
+│   └── Superstore_Sales_Analysis_Lesson_6.twbx
 │
 └── README.md
 ```
@@ -607,12 +812,18 @@ tableau-superstore-sales-analysis/
 - Customer Analysis
 - Discount Analysis
 - Sales Performance Analysis
+- Parameters
+- Dynamic Metric Selection
+- Dynamic Dimension Selection
+- Dynamic Titles
+- Dynamic Labels
+- Interactive Parameter Analysis
 
 ## Current Stage
 
-**Lesson 5 — Calculated Fields completed**
+**Lesson 6 — Parameters completed**
 
-The Lesson 5 Tableau workbook has been uploaded to the repository.
+The Lesson 6 Tableau workbook has been uploaded to the repository.
 
 ## Next
 
