@@ -324,3 +324,92 @@ They make it possible to analyze:
 - Smoothed trends
 
 These calculations help transform basic visualizations into more meaningful time-based and comparative business analysis.
+
+# Lesson 8 — Interactive Dashboard
+
+Lesson 8 focused on creating and formatting an interactive Tableau dashboard using the Superstore dataset.
+
+## Concepts Practiced
+
+- Dashboard creation and layout
+- Worksheet positioning
+- Dashboard title and subtitle
+- Chart formatting
+- Gridline removal
+- Number and currency formatting
+- Dashboard filters
+- Applying filters to multiple worksheets
+- Filter Actions
+- Highlight Actions
+- Clearing filter selections
+- Tooltip customization
+- Dashboard usability and testing
+
+## Dashboard Components
+
+The dashboard combines four worksheets:
+
+- Monthly Sales Trend
+- Sales by Region
+- Sales by Category
+- Profit by Sub-Category
+
+## Year Filter
+
+The `Year of Order Date` filter was applied to all four worksheets.
+
+Selecting a year updates the complete dashboard, while clearing the filter returns the dashboard to the overall view.
+
+```text
+Select Year
+     ↓
+All Charts Update
+     ↓
+Clear Filter
+     ↓
+Overall Dashboard Returns
+```
+## Region Filter Action
+
+A Filter Action was created using Sales by Region.
+
+Selecting a region filters the other dashboard charts. Clearing the selection returns the charts to their original state.
+
+## Category Highlight Action
+
+A Highlight Action was created using Sales by Category.
+
+Selecting a category highlights the related sub-categories in Profit by Sub-Category while keeping other sub-categories visible.
+
+The Category field was added to the Detail shelf to enable the highlight interaction.
+```
+Select Category
+     ↓
+Related Sub-Categories Highlight
+     ↓
+Other Data Remains Visible
+```
+## Tooltip Customization
+
+Custom tooltips were created for all four charts:
+
+Monthly Sales Trend → Date and Sales
+Sales by Region → Region and Sales
+Sales by Category → Category and Sales
+Profit by Sub-Category → Sub-Category and Profit
+Dashboard Formatting
+
+The dashboard was cleaned using:
+```
+Gridline removal
+Currency formatting
+Consistent chart presentation
+Clear titles
+Subtitle
+Improved spacing
+Clean layout
+Interactive filters and actions
+```
+## Lesson 8 Outcome
+
+The Superstore analysis was transformed into an interactive Tableau dashboard that allows users to filter by year, filter by region, highlight categories, and explore detailed information through customized tooltips.
