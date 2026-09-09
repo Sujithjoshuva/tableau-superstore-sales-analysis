@@ -410,6 +410,36 @@ Improved spacing
 Clean layout
 Interactive filters and actions
 ```
-## Lesson 8 Outcome
+## Outcome
 
 The Superstore analysis was transformed into an interactive Tableau dashboard that allows users to filter by year, filter by region, highlight categories, and explore detailed information through customized tooltips.
+
+# Lesson 9 — Dashboard Navigation
+
+Lesson 9 focused on making the Tableau workbook easier to navigate and explore.
+
+## Key Concepts
+
+- Created a `Detailed Analysis Dashboard`
+- Added navigation buttons between dashboards
+- Configured two-way dashboard navigation
+- Used floating objects for button positioning
+- Added tooltips to navigation buttons
+- Tested the complete dashboard navigation flow
+
+## Navigation Flow
+
+```text
+Main Dashboard
+      ↓
+Detailed Analysis
+      ↓
+Detailed Analysis Dashboard
+      ↓
+Back to Sales Dashboard
+      ↓
+Main Dashboard
+```
+## Outcome
+
+Created a user-friendly Tableau workbook with seamless navigation between the main dashboard and detailed analysis dashboard.
