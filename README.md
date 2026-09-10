@@ -414,9 +414,9 @@ Interactive filters and actions
 
 The Superstore analysis was transformed into an interactive Tableau dashboard that allows users to filter by year, filter by region, highlight categories, and explore detailed information through customized tooltips.
 
-# Lesson 9 — Dashboard Navigation
+# Dashboard Navigation
 
-Lesson 9 focused on making the Tableau workbook easier to navigate and explore.
+Focused on making the Tableau workbook easier to navigate and explore.
 
 ## Key Concepts
 
@@ -443,3 +443,31 @@ Main Dashboard
 ## Outcome
 
 Created a user-friendly Tableau workbook with seamless navigation between the main dashboard and detailed analysis dashboard.
+
+# Dashboard Usability
+
+Focused on improving Tableau dashboard usability and filter management.
+
+## Concepts Practiced
+
+- Show/Hide Containers
+- Vertical Containers
+- Collapsible Filter Panel
+- Show/Hide Buttons
+- Button Tooltips
+- Floating Objects
+- Filter Organization
+- Dashboard Testing
+
+## Implementation
+
+Placed the `Year of Order Date` filter inside a container and added a **Show/Hide Filters** button.
+
+```text
+Show Filters ↔ Hide Filters
+```
+Tested the filter in both visible and hidden states while ensuring all existing dashboard interactions continued to work.
+
+## Outcome
+
+Improved dashboard usability, layout, and interactive filter management.
