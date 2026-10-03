@@ -2,15 +2,11 @@
 
 ## Project Overview
 
-This project analyzes the **Superstore dataset** using Tableau.
+An end-to-end Tableau project using the **Superstore dataset** to analyze sales, profit, customers, regions, categories, discounts, and business performance.
 
-The project was developed step by step while learning Tableau concepts from beginner to advanced level. Each lesson was applied directly to the dataset to answer business questions and generate insights.
+The project progresses from basic Tableau concepts to **interactive dashboards, Sets, Parameters, Table Calculations, and LOD Expressions**.
 
-The analysis covers sales, profit, customers, regions, categories, discounts, parameters, and time-based trends.
-
----
-
-# Dataset
+## Dataset
 
 - **Dataset:** Superstore
 - **Records:** 9,994
@@ -18,456 +14,262 @@ The analysis covers sales, profit, customers, regions, categories, discounts, pa
 
 ---
 
-# Lesson 1–3 — Foundations and Basic Analysis
+# Lessons & Key Outcomes
 
-The first lessons focused on understanding the Tableau interface, dimensions, measures, visualizations, sorting, filters, and basic business analysis.
+## Lesson 1–3 — Tableau Foundations
 
-## Key Insights
+Learned:
 
-### Sales by Region
+- Dimensions and Measures
+- Basic charts and visualizations
+- Sorting and filtering
+- Sales and profit analysis
+- Customer analysis
+- Regional and category analysis
 
-| Region | Sales |
-|---|---:|
-| West | $725,457.82 |
-| South | $391,721.91 |
+### Key Findings
 
-**Insight:** West generated the highest sales, while South generated the lowest sales.
-
----
-
-### Sales by Category
-
-| Category | Sales |
-|---|---:|
-| Technology | $836,154.03 |
-| Office Supplies | $719,047.03 |
-
-**Insight:** Technology generated the highest sales, while Office Supplies generated the lowest sales.
+- West Sales: **$725,457.82**
+- South Sales: **$391,721.91**
+- Technology Sales: **$836,154.03**
+- Copiers Profit: **$55,617.82**
+- Tables Profit: **-$17,725.48**
 
 ---
 
-### Monthly Sales Trend
+## Lesson 4 — Groups & Sets
 
-- Highest sales month: **November 2017 — $118,447.83**
-- Lowest sales month: **February 2014 — $4,519.89**
+Learned:
 
-**Insight:** Monthly sales fluctuate over time, with November 2017 recording the highest sales in the analyzed period.
+- Groups
+- Sets
+- Top N Sets
+- Combined Sets
+- Set Actions
+- IN / OUT analysis
 
----
+### Finding
 
-### Profit by Sub-Category
+- Top 10 Sales & Profit overlap: **6 customers**
 
-- Highest profit: **Copiers — $55,617.82**
-- Lowest profit: **Tables — -$17,725.48**
-
-**Insight:** High sales do not necessarily result in high profit. Tables are a clear example of a sub-category generating sales while producing a loss.
-
----
-
-### Regional Profit
-
-- Highest profit: **West — $108,418.45**
-- Lowest profit: **Central — $39,706.36**
-
-**Insight:** West performed strongly in both sales and profit.
+Sales performance and profit performance do not always identify the same customers.
 
 ---
 
-# Lesson 4 — Groups and Sets
+## Lesson 5 — Calculated Fields
 
-Lesson 4 focused on using Groups, Sets, Combined Sets, and Set Actions to analyze customer performance.
+Created calculations for:
 
-## Evidence
+- Profit Margin
+- Average Sales per Unit
+- Sales per Order
+- Profit Status
+- Profit Performance
+- Discount Band
+- Sales Performance
 
-- Top 10 Sales customers: **10**
-- Top 10 Profit customers: **10**
-- Customers in both groups: **6**
-- Customers in either group: **14**
+### Key Findings
 
-## Insight
+- Technology Profit Margin: **17.40%**
+- Furniture Profit Margin: **2.49%**
+- Labels Profit Margin: **44.42%**
+- Tables Profit Margin: **-8.56%**
+- High Discount Profit Margin: **-77.40%**
 
-Only **6 customers** appeared in both the Top 10 Sales and Top 10 Profit groups.
-
-This shows that strong sales performance does not automatically mean strong profit performance.
-
----
-
-# Lesson 5 — Calculated Fields
-
-Lesson 5 focused on creating calculated fields to generate new metrics and classify business performance.
-
-## Profit Margin
-
-### Regional Profit Margin
-
-- Highest: **West — 14.94%**
-- Lowest: **Central — 7.92%**
-
-### Category Profit Margin
-
-- Highest: **Technology — 17.40%**
-- Lowest: **Furniture — 2.49%**
-
-### Sub-Category Profit Margin
-
-- Highest: **Labels — 44.42%**
-- Lowest: **Tables — -8.56%**
-
-**Insight:** Technology demonstrates strong performance in both sales and profitability, while Tables remain a major profitability concern.
+**Insight:** Sales volume alone does not fully represent profitability.
 
 ---
 
-## Average Sales per Unit
+## Lesson 6 — Parameters
 
-- Highest: **Copiers — $639.00**
-- Lowest: **Fasteners — $3.30**
+Created dynamic parameters for:
 
-**Insight:** Copiers generate significantly higher sales value per unit compared with other sub-categories.
+- Metric Selection
+- Dimension Selection
 
----
-
-## Sales per Order
-
-- Highest region: **East — $484.50**
-
-**Insight:** East generated the highest average sales value per distinct order.
-
----
-
-## Discount Analysis
-
-| Discount Band | Profit Margin |
-|---|---:|
-| No Discount | 29.51% |
-| Low Discount | 11.91% |
-| Medium Discount | -15.30% |
-| High Discount | -77.40% |
-
-**Insight:** Higher discount bands are associated with substantially weaker profitability. Medium and High Discount bands are loss-making in this dataset.
-
----
-
-## Profit Performance Classification
-
-| Performance | Sub-Categories |
-|---|---:|
-| Loss | 3 |
-| Low Profit | 5 |
-| Strong Profit | 9 |
-
-**Insight:** Although most sub-categories are profitable, not all generate strong profits.
-
----
-
-# Lesson 6 — Parameters
-
-Lesson 6 focused on creating dynamic and interactive visualizations using parameters.
-
-The visualization can dynamically change the selected dimension and metric.
-
-## Parameter Analysis Evidence
-
-### Region + Profit
-
-| Region | Profit |
-|---|---:|
-| West | $108,418.45 |
-| East | $91,522.78 |
-| South | $46,749.43 |
-| Central | $39,706.36 |
-
-**Insight:** West generated the highest regional profit.
-
----
-
-### Category + Sales
-
-| Category | Sales |
-|---|---:|
-| Technology | $836,154.03 |
-| Furniture | $741,999.80 |
-| Office Supplies | $719,047.03 |
-
-**Insight:** Technology generated the highest category sales.
-
----
-
-### Sub-Category + Quantity
-
-- Highest quantity: **Binders — 5,974 units**
-
-**Insight:** Binders recorded the highest quantity sold among the sub-categories.
-
----
-
-## Lesson 6 Key Insight
-
-Parameters allow the same visualization to answer multiple business questions without creating separate charts.
-
-For example:
+The same visualization can dynamically analyze:
 
 ```text
 Region + Profit
 Category + Sales
-Sub-Category + Quantity
+Sub-Category + Quantit
 ```
 
 # Lesson 7 — Table Calculations
 
-Lesson 7 focused on using Tableau Table Calculations to analyze values already displayed in visualizations.
+Learned Tableau Table Calculations for time-based and comparative analysis.
 
-The analysis included:
+## Concepts
 
 - Running Total
 - Difference From Previous
 - Percent Difference From Previous
 - Percent of Total
 - Moving Average
-- Table (Across)
-- Table (Down)
+- Table Across / Table Down
 
----
+### Category Sales Contribution
 
-## Running Total
-
-The Running Total calculation shows how sales accumulate over time.
-
-### Insight
-
-Cumulative analysis provides a clearer view of overall sales growth across the analyzed period.
-
----
-
-## Difference From Previous
-
-This calculation compares each period's sales with the previous period.
-
-### Insight
-
-It helps identify whether sales increased or decreased between consecutive periods.
-
-- Positive value indicates an increase.
-- Negative value indicates a decrease.
-
----
-
-## Percent Difference From Previous
-
-This calculation shows the percentage change in sales compared with the previous period.
-
-### Insight
-
-Percentage change provides relative context for sales growth or decline between periods.
-
-- Positive percentage indicates growth.
-- Negative percentage indicates decline.
-
----
-
-## Percent of Total Sales by Category
-
-| Category | Contribution to Total Sales |
+| Category | Contribution |
 |---|---:|
 | Technology | 36.40% |
 | Furniture | 32.20% |
 | Office Supplies | 31.30% |
 
-### Insight
-
-**Technology** contributes the largest share of total sales at **36.40%**.
-
-Furniture contributes **32.20%**, while Office Supplies contributes **31.30%**.
+**Key Insight:** Technology contributed the largest share of total sales.
 
 ---
-
-## Moving Average
-
-The Moving Average calculation smooths short-term sales fluctuations to make the overall trend easier to observe.
-
-### Insight
-
-A moving average helps identify the broader sales trend by reducing the impact of short-term fluctuations.
-
----
-
-## Table (Across) vs Table (Down)
-
-### Table (Across)
-
-Calculates values from left to right.
-
-This was used for time-based calculations such as:
-
-- Running Total
-- Difference From Previous
-- Percent Difference From Previous
-- Moving Average
-
-### Table (Down)
-
-Calculates values from top to bottom.
-
-This was used for the category-level Percent of Total calculation because the categories were displayed vertically.
-
----
-
-## Lesson 7 Key Insight
-
-Table calculations add another layer of analysis to Tableau visualizations.
-
-They make it possible to analyze:
-
-- Cumulative performance
-- Period-to-period changes
-- Percentage changes
-- Contribution to total
-- Smoothed trends
-
-These calculations help transform basic visualizations into more meaningful time-based and comparative business analysis.
 
 # Lesson 8 — Interactive Dashboard
 
-Lesson 8 focused on creating and formatting an interactive Tableau dashboard using the Superstore dataset.
+Built the **Superstore Sales Performance Dashboard**.
 
-## Concepts Practiced
-
-- Dashboard creation and layout
-- Worksheet positioning
-- Dashboard title and subtitle
-- Chart formatting
-- Gridline removal
-- Number and currency formatting
-- Dashboard filters
-- Applying filters to multiple worksheets
-- Filter Actions
-- Highlight Actions
-- Clearing filter selections
-- Tooltip customization
-- Dashboard usability and testing
-
-## Dashboard Components
-
-The dashboard combines four worksheets:
+## Features
 
 - Monthly Sales Trend
 - Sales by Region
 - Sales by Category
 - Profit by Sub-Category
+- Year Filter
+- Region Filter Action
+- Category Highlight Action
+- Custom Tooltips
 
-## Year Filter
+**Outcome:** Created an interactive dashboard for exploring sales, profit, regional, category, and time-based performance.
 
-The `Year of Order Date` filter was applied to all four worksheets.
+---
 
-Selecting a year updates the complete dashboard, while clearing the filter returns the dashboard to the overall view.
+# Lesson 9 — Dashboard Navigation
 
-```text
-Select Year
-     ↓
-All Charts Update
-     ↓
-Clear Filter
-     ↓
-Overall Dashboard Returns
-```
-## Region Filter Action
+Focused on dashboard navigation and user flow.
 
-A Filter Action was created using Sales by Region.
+## Concepts
 
-Selecting a region filters the other dashboard charts. Clearing the selection returns the charts to their original state.
-
-## Category Highlight Action
-
-A Highlight Action was created using Sales by Category.
-
-Selecting a category highlights the related sub-categories in Profit by Sub-Category while keeping other sub-categories visible.
-
-The Category field was added to the Detail shelf to enable the highlight interaction.
-```
-Select Category
-     ↓
-Related Sub-Categories Highlight
-     ↓
-Other Data Remains Visible
-```
-## Tooltip Customization
-
-Custom tooltips were created for all four charts:
-
-Monthly Sales Trend → Date and Sales
-Sales by Region → Region and Sales
-Sales by Category → Category and Sales
-Profit by Sub-Category → Sub-Category and Profit
-Dashboard Formatting
-
-The dashboard was cleaned using:
-```
-Gridline removal
-Currency formatting
-Consistent chart presentation
-Clear titles
-Subtitle
-Improved spacing
-Clean layout
-Interactive filters and actions
-```
-## Outcome
-
-The Superstore analysis was transformed into an interactive Tableau dashboard that allows users to filter by year, filter by region, highlight categories, and explore detailed information through customized tooltips.
-
-# Dashboard Navigation
-
-Focused on making the Tableau workbook easier to navigate and explore.
-
-## Key Concepts
-
-- Created a `Detailed Analysis Dashboard`
-- Added navigation buttons between dashboards
-- Configured two-way dashboard navigation
-- Used floating objects for button positioning
-- Added tooltips to navigation buttons
-- Tested the complete dashboard navigation flow
-
-## Navigation Flow
+- Navigation Buttons
+- Two-Way Navigation
+- Floating Objects
+- Navigation Tooltips
 
 ```text
 Main Dashboard
       ↓
 Detailed Analysis
       ↓
-Detailed Analysis Dashboard
-      ↓
 Back to Sales Dashboard
-      ↓
-Main Dashboard
 ```
-## Outcome
+Outcome: Created seamless navigation between dashboards.
 
-Created a user-friendly Tableau workbook with seamless navigation between the main dashboard and detailed analysis dashboard.
+# Lesson 10 — Dashboard Usability
 
-# Dashboard Usability
+Improved dashboard usability and filter management.
 
-Focused on improving Tableau dashboard usability and filter management.
-
-## Concepts Practiced
-
+## Concepts
 - Show/Hide Containers
 - Vertical Containers
 - Collapsible Filter Panel
 - Show/Hide Buttons
-- Button Tooltips
-- Floating Objects
 - Filter Organization
-- Dashboard Testing
 
-## Implementation
+**Outcome:** Created a cleaner and more user-friendly dashboard experience.
 
-Placed the `Year of Order Date` filter inside a container and added a **Show/Hide Filters** button.
+---
+
+# Lesson 11 — Dashboard Design & UX
+
+Focused on improving dashboard layout and visual consistency.
+
+## Improvements
+- Fixed dashboard size: **1155 × 592 px**
+- Visual hierarchy
+- Chart alignment
+- Spacing
+- Control positioning
+- Readability
+
+**Outcome:** Improved dashboard structure and user experience.
+
+---
+
+# Lesson 12 — Dashboard Performance
+
+Focused on workbook cleanup and performance optimization.
+
+## Reviewed
+- Unused worksheets
+- Duplicate actions
+- Unnecessary filters
+- Unused calculations
+- Dashboard responsiveness
+
+**Outcome:** Improved workbook organization and verified smooth dashboard performance.
+
+---
+
+# Lesson 13 — Advanced Sets
+
+Focused on interactive Tableau Sets.
+
+## Concepts
+- Dynamic Sets
+- Set Controls
+- Set Actions
+- IN / OUT Membership
+- Interactive Filtering
+
+Created a `Category Control Set` to dynamically filter sub-category analysis.
+
+**Outcome:** Learned to build interactive Set-based analysis.
+
+---
+
+# Lesson 14 — LOD Expressions
+
+Focused on advanced Tableau calculations using Level of Detail expressions.
+
+## Concepts
+- FIXED
+- INCLUDE
+- EXCLUDE
+- Context Filters
+- LOD Aggregations
+- Customer & Regional Analysis
+
+### Average Sales per Customer
 
 ```text
-Show Filters ↔ Hide Filters
+AVG(
+    { FIXED [Region], [Customer Name] : SUM([Sales]) }
+)
 ```
-Tested the filter in both visible and hidden states while ensuring all existing dashboard interactions continued to work.
+| Region | Average Sales per Customer |
+|---|---:|
+| West | $1,057.52 |
+| East | $1,007.09 |
+| Central | $796.88 |
+| South | $765.08 |
 
-## Outcome
+### LOD Comparison
 
-Improved dashboard usability, layout, and interactive filter management.
+- **FIXED** → Calculate at a specified level
+- **INCLUDE** → Add a dimension to the calculation
+- **EXCLUDE** → Remove a dimension from the calculation
+
+Also practiced Context Filters and customer benchmarking against regional averages.
+
+**Outcome:** Learned to use LOD expressions for advanced customer, regional, and profitability analysis.
+
+---
+
+## Skills Practiced
+
+- Tableau
+- Dashboard Design
+- Dashboard Usability
+- Sets & Set Actions
+- Calculated Fields
+- LOD Expressions
+- FIXED / INCLUDE / EXCLUDE
+- Context Filters
+- Customer Analysis
+- Regional Analysis
+- Business Analysis
