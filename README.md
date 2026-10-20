@@ -260,6 +260,110 @@ Also practiced Context Filters and customer benchmarking against regional averag
 
 ---
 
+# Lesson 15 — Advanced Tableau Analytics
+
+Focused on advanced analytics techniques to identify trends, forecast sales, discover patterns, and understand sales distributions.
+
+## Concepts
+
+- Reference Lines
+- Trend Lines
+- Confidence Bands
+- Forecasting
+- Forecast Models
+- Seasonality
+- Clustering
+- Box Plots
+- Quartiles, Whiskers, and Potential Outliers
+
+## 1. Reference Lines
+
+Created average and constant reference lines to compare regional sales against benchmarks.
+
+### Regional Sales
+
+| Region | Sales |
+|---|---:|
+| West | $725,457.82 |
+| East | $678,781.24 |
+| Central | $501,239.89 |
+| South | $391,721.91 |
+
+**Insight:** West recorded the highest regional sales, while South recorded the lowest.
+
+## 2. Trend Lines & Confidence Bands
+
+- Created a linear trend line for monthly sales.
+- Examined R-squared and p-value.
+- Added confidence bands to understand uncertainty around the estimated trend.
+
+### Model Results
+
+- R-squared: 0.251202
+- P-value: 0.000285
+
+**Insight:** The linear model identified a statistically significant trend, but the R-squared value indicates that it explains only part of the variation in monthly sales.
+
+## 3. Forecasting
+
+Created a monthly sales forecast using Tableau's automatic exponential smoothing model.
+
+### Concepts Practiced
+
+- Historical Data vs Forecast
+- Prediction Intervals
+- Forecast Length
+- Seasonal Patterns
+- Forecast Model Evaluation
+- RMSE, MAE, MASE, MAPE, and AIC
+
+### Forecast Configuration
+
+- Historical period: January 2014 – December 2017
+- Forecast period: January 2018 – December 2018
+- Seasonal cycle: 12 months
+- Forecast model: Exponential Smoothing
+
+**Outcome:** Learned how to generate sales forecasts and interpret prediction intervals, seasonality, and model evaluation metrics.
+
+## 4. Clustering
+
+Created clusters using Sales and Profit to explore similarities between product sub-categories.
+
+### Concepts Practiced
+
+- Tableau Clustering
+- Sales and Profit as Clustering Variables
+- Automatic Cluster Selection
+- Comparing Two-Cluster and Three-Cluster Solutions
+
+**Insight:** Clustering helps explore groups of product sub-categories with similar sales and profit characteristics. Cluster membership alone does not indicate whether a product is performing well or poorly.
+
+## 5. Box Plots
+
+Created a box plot to examine sales distributions across product sub-categories.
+
+### Concepts Practiced
+
+- Median
+- Lower and Upper Quartiles
+- Interquartile Range (IQR)
+- Whiskers
+- Potential Outliers
+- Sales Variation
+
+**Outcome:** Learned how to interpret the spread of sales observations and identify unusually high or low values for further investigation.
+
+## Key Learnings
+
+- Reference lines help compare performance against benchmarks.
+- Trend lines reveal overall patterns in historical data.
+- Forecasts provide estimates, not guaranteed future results.
+- Clustering helps identify similarities between product sub-categories.
+- Box plots help analyze distributions and potential outliers.
+
+**Overall Outcome:** Applied advanced Tableau analytics techniques to explore regional performance, monthly sales trends, future sales estimates, product groupings, and sales distributions.
+
 ## Skills Practiced
 
 - Tableau
