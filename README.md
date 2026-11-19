@@ -414,3 +414,14 @@ Created an interactive Tableau dashboard to provide a consolidated overview of S
 ### Dashboard Preview
 
 ![Superstore KPI Dashboard](Tableau/Superstore_KPI_Dashboard.jpg)
+
+
+### Overall Insights Summary
+
+- West was the highest-performing region in sales.
+- Technology generated the highest profit among the three categories.
+- Furniture recorded the lowest category profit.
+- November 2017 had the highest monthly sales.
+- Total sales reached $2,297,200.86, with a total profit of $286,397.02.
+- The overall profit margin was 12.47%.
+- Interactive year filters and region actions allow users to explore performance dynamically.
