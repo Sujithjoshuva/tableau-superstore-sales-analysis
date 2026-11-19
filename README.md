@@ -377,3 +377,40 @@ Created a box plot to examine sales distributions across product sub-categories.
 - Customer Analysis
 - Regional Analysis
 - Business Analysis
+
+
+### Summary
+Created an interactive Tableau dashboard to provide a consolidated overview of Superstore sales and profitability performance.
+
+### Key Performance Indicators (KPIs)
+- **Total Sales:** $2,297,200.86
+- **Total Profit:** $286,397.02
+- **Total Orders:** 5,009
+- **Profit Margin:** 12.47%
+
+### Dashboard Visualizations
+- **Monthly Sales Trend:** Displays monthly sales performance across years.
+- **Sales by Region:** Compares sales performance across four regions.
+- **Profit by Category:** Compares profitability across Technology, Office Supplies, and Furniture.
+- **Top 10 Products by Sales:** Highlights the ten highest-selling products.
+
+### Interactive Features
+- **Year Filter:** Filters dashboard data by order year.
+- **Region Filter Action:** Selecting a region dynamically updates the KPI cards and other visualizations.
+- **Interactive Dashboard:** Provides a consolidated view of sales and profitability metrics.
+
+### Tools & Skills
+- Tableau Desktop
+- KPI Development
+- Dashboard Design
+- Data Visualization
+- Filters and Dashboard Actions
+- Sales and Profitability Analysis
+
+### Project Files
+- `Superstore_KPI_Dashboard.twbx` – Standalone KPI dashboard workbook.
+- `Superstore_Sales_Analysis.twbx` – Main Tableau learning and analysis workbook.
+
+### Dashboard Preview
+
+![Superstore KPI Dashboard](Tableau/Superstore_KPI_Dashboard.jpg)
