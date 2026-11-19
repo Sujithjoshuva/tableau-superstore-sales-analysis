@@ -6,6 +6,21 @@ An end-to-end Tableau project using the **Superstore dataset** to analyze sales,
 
 The project progresses from basic Tableau concepts to **interactive dashboards, Sets, Parameters, Table Calculations, and LOD Expressions**.
 
+
+## Business Problem
+
+The business needs a clear understanding of its sales and profitability performance across regions, product categories, months, and products. Without an interactive view of these metrics, it can be difficult to identify strong-performing areas, recognize underperforming segments, and make informed business decisions.
+
+## Business Recommendations
+
+- **Improve Regional Performance:** Investigate the lower sales performance in the South region and identify opportunities to improve sales.
+- **Review Category Profitability:** Examine Furniture's lower profit performance and investigate possible pricing or cost-related improvements.
+- **Strengthen High-Performing Categories:** Use Technology's strong profit performance to understand successful product and sales strategies.
+- **Monitor Monthly Trends:** Track monthly sales performance to identify seasonal patterns and support better planning.
+- **Optimize Product Focus:** Monitor the top 10 products by sales and evaluate opportunities to maintain their performance.
+- **Use Interactive Analysis:** Regularly review the dashboard using year filters and regional selection to support data-driven decisions.
+
+
 ## Dataset
 
 - **Dataset:** Superstore
